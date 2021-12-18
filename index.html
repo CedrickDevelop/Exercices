@@ -4,18 +4,95 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+
+  <link rel="stylesheet" href="modal.css">
+  <link rel="stylesheet" href="Orcs/css/style.css">
+  <link rel="stylesheet" href="Orcs/css/move.css">
+
+
+  
+  <title>Orcs</title>
 </head>
 <body>
-
-  <h2>Exercice de base </h2>
-  <script src="app.js"></script> 
-
-  <h2>Exercice Calculette</h2>
-  {# <script src="calculette.js"></script> #}
   
-  <h2>Exercice Orcs</h2>
-  <script src="Orcs.js"></script> 
+  
+  <h2>Exercice Orcs</h2> 
+
+
+  <!-- Actions -->
+  <section id="header">
+    <div class="titre-action"><p>Premiere Action</p></div>
+    
+    <article class="action">
+
+      <div class="titre-action1 slideDroite">
+        <p class="nom1">-</p>
+        <span class="action1">--</span>
+      
+      </div>
+  
+      <p>||</p>
+  
+      <div class="titre-action2 slideGauche">
+        <p class="nom2">- </p>
+        <span class="action2">--</span>
+      </div>
+
+    </article>
+
+    <article id="buttons">
+      <button id="btn_attack" class="btn btn-danger">attack</button>
+      <button id="btn_defense" class="btn btn-success">defense</button>
+      <button id="btn_give_order" class="btn btn-primary">order</button>
+      <button id="btn_identity" class="btn btn-warning">identity</button>
+      <!-- <button id="btn_start" class="btn btn-success">start</button>  -->
+    </article>
+
+
+
+  </section>
+
+
+  <!-- Personnages -->
+  <section id="arene">
+
+    <article  id="perso_1"><!-- Perso 1-->
+      <img class="slideGauche" src="Orcs/images/ChefOrc.png" alt="">
+    </article>
+
+    <article id="perso_2"   ><!-- Perso 2-->
+      <img class="slideDroite" src="Orcs/images/darkVador.jpg" alt="">
+    </article id="perso_2 ">
+
+  </section>
+  <script src="Orcs/js/Orcs.js"></script>  
+  <script src="Orcs/js/action.js"></script>  
+  <script src="Orcs/js/variables.js"></script>  
+  <!--
+    <h2>Exercice de base </h2>
+    <script src="app.js"></script>  
+    
+  
+    <h2>Exercice Calculette</h2> #}
+    <script src="calculette.js"></script> 
+    
+    <h2>Trouvez les pinguins</h2>
+    
+  <button class="btn btn-primary" id="moveDiv" >Click</button>
+
+  <div class="container">
+      <div class="red"></div>
+  </div>
+  
+  <div class="modal">
+    <div class="modal-title">
+      <img src="linux.png" alt="">
+    </div>
+  </div>
+  
+  <script src="modal.js"></script> 
+  -------------------------------------------->
+
   
   
 

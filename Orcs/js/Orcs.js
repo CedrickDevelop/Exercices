@@ -1,9 +1,12 @@
+
+let strength = 100;
+
 class Creature 
 {
-  constructor(nameCreature, age, strength)
+  constructor(nameCreature)
   {
-    this.nameCreature = "<mark><strong>" + nameCreature +"</strong></mark>"
-    this.age = age
+    this.nameCreature = "<strong>" + nameCreature +"</strong>"
+    // this.age = age
     this.strength = strength
   }
 
@@ -33,10 +36,11 @@ class Creature
 
 class Orc extends Creature
 {
-  constructor(nameCreature, age, strength)
+  constructor(nameCreature)
   {
-    super(nameCreature, age, strength)
+    super(nameCreature)
     this.type = "Orc"
+    this.strength = strength 
   }
 
   scream(word)
@@ -65,10 +69,10 @@ class Orc extends Creature
 }
 
 class Urukhai extends Orc{
-  constructor(nameCreature, strength)
+  constructor(nameCreature)
   {
     strength = strength + 10
-    super(nameCreature, strength)
+    super(nameCreature)
   }
 
   kill(perso)
@@ -80,10 +84,10 @@ class Urukhai extends Orc{
 
 class ChieffOrc extends Orc
 {
-  constructor(nameCreature, age, strength)
+  constructor(nameCreature)
   {
-    strength = strength + 2
-    super(nameCreature, age, strength)
+    strength = strength + 20
+    super(nameCreature)
     this.type = "Chef Orc"
   }
 
@@ -104,24 +108,6 @@ class ChieffOrc extends Orc
 
 }
 
-let perso1 = new Creature("Jean", 24, 57)
-let Orc1 = new Orc("Orka", 15, 100)
-let Orc2 = new Orc("Robio", 25, 150)
-let Urukai = new Urukhai("Uru", 80)
-let Chef = new ChieffOrc("Chief", 80, 250)
- 
-Orc1.scream("Fuuuuucccckkkkk")
-Orc1.scream("Je suis fatigué et j'ai faimmmmmm mmmhhh")
-Orc1.identity()
-
-Orc2.scream("Tais-toi bitch")
-Orc2.bite(Orc1)
-
-Urukai.kill(Orc2)
-Orc2.identity()
-
-Chef.identity()
-Chef.giveOrder(Urukai, " Arrete de tuer tout le monde !!!!")
 
 
 
