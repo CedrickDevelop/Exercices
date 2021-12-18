@@ -67,12 +67,12 @@ let result = x + y
 
 
 // EXERCICE age
-let age = 21;
+// let age = 21;
 
-while (age < 38) {
-  document.write(age + " ans : bon anniversaire ! <br>"); 
-  age++;
-}
+// while (age < 38) {
+//   document.write(age + " ans : bon anniversaire ! <br>"); 
+//   age++;
+// }
 
 
 
