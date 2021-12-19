@@ -1,5 +1,17 @@
 
 let strength = 100;
+let speakTouched = 
+[
+  "Almost done",
+  "Ouch i've been touched",
+  "you got me ",
+  "thats' dare bitch",
+  "nothing"
+]
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
 
 class Creature 
 {
@@ -28,6 +40,49 @@ class Creature
 
     return document.write("<br>" +  texte );
   }
+  setStrength(attack)
+  {
+    this.strength = strength - btn_attack;
+  }
+  getStrength()
+  {
+    return this.strength;
+  }
+
+  been_attack(force)
+  {
+    this.strength -= force;
+    if (this.strength > 0){
+      console.log(true)
+      return true
+    }
+    return false
+
+  }
+
+  attack(adversaire)
+  {
+    if (!(adversaire instanceof Creature)) {
+      throw new Error("<br>" + "Ceci n'est pas un personnage")
+    }
+
+    let life_adversaire = adversaire.been_attack(10);
+    
+    if (life_adversaire == true){
+      return true;
+    }
+    return false;
+  }
+
+  sayOuch()
+  {
+    if (this.strength > 10){
+      let numberSpeak = Math.floor(Math.random() * (speakTouched.length-1));
+      return speakTouched[numberSpeak]
+    }
+    return speakTouched[0]
+  }
+
 }
 
 /***************************
@@ -40,6 +95,7 @@ class Orc extends Creature
   {
     super(nameCreature)
     this.type = "Orc"
+    // this.force = 15
     this.strength = strength 
   }
 
@@ -58,14 +114,8 @@ class Orc extends Creature
     
   }
   
-  bite(perso)
-  {
-    if (!(perso instanceof Creature)) {
-      throw new Error("<br>" + "Ceci n'est pas un personnage")
-    }
 
-    return document.write("<br>" + this.nameCreature + " a mordu " + perso.nameCreature)
-  }
+
 }
 
 class Urukhai extends Orc{
@@ -87,6 +137,7 @@ class ChieffOrc extends Orc
   constructor(nameCreature)
   {
     strength = strength + 20
+    // this.force = 30
     super(nameCreature)
     this.type = "Chef Orc"
   }

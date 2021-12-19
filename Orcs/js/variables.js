@@ -8,9 +8,10 @@ let text_action2 = document.querySelector(".action2")
 
 // BOUTONS ---------------
 let btn = document.querySelector(".btn");
-let btn_start = document.querySelector(".btn_start");
 
-let btn_attack = document.querySelector("#btn_attack")
+let btn_start = document.querySelector(".btn_start");
+let btn_attack1 = document.querySelector("#btn_attack1")
+let btn_attack2 = document.querySelector("#btn_attack2")
 let btn_defense = document.querySelector("#btn_defense")
 let btn_identity = document.querySelector("#btn_identity")
 
