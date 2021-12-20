@@ -67,15 +67,15 @@ btn_attack2.addEventListener("click", function() {
 
 
 
-perso1.scream("Fuuuuucccckkkkk")
-perso1.scream("Je suis fatigué et j'ai faimmmmmm mmmhhh")
-perso1.identity()
+// perso1.scream("Fuuuuucccckkkkk")
+// perso1.scream("Je suis fatigué et j'ai faimmmmmm mmmhhh")
+// perso1.identity()
 
-perso2.scream("Tais-toi bitch")
-perso2.attack(perso1)
+// perso2.scream("Tais-toi bitch")
+// perso2.attack(perso1)
 
-// Urukai.kill(perso2)
-perso2.identity()
+// // Urukai.kill(perso2)
+// perso2.identity()
 
 // Chef.identity()
 // Chef.giveOrder(Urukai, " Arrete de tuer tout le monde !!!!")
